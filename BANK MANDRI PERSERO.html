@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Form Data Nasabah | Bank Mandiri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;font-family:'Inter',sans-serif}
+body{margin:0;background:#f4f7fb;color:#1f2937}
+
+.wrapper{
+    max-width:840px;
+    margin:40px auto;
+    background:#ffffff;
+    border-radius:16px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+    animation:fadeUp .6s ease;
+}
+
+/* HEADER */
+.header{
+    padding:30px 38px;
+    border-bottom:1px solid #e5e7eb;
+    background:linear-gradient(135deg,#003d79,#005cb3);
+    color:#fff;
+    border-radius:16px 16px 0 0;
+}
+.header h1{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+}
+.header p{
+    margin-top:6px;
+    font-size:13px;
+    opacity:.9;
+}
+
+/* SECTION */
+.section{padding:28px 38px 10px}
+.section-title{
+    font-size:14px;
+    font-weight:600;
+    color:#003d79;
+    margin-bottom:16px;
+}
+
+/* FORM */
+.form-group{margin-bottom:16px}
+label{
+    display:block;
+    font-size:12px;
+    font-weight:500;
+    margin-bottom:6px;
+    color:#374151;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:12px 14px;
+    font-size:14px;
+    border:1px solid #d1d5db;
+    border-radius:9px;
+    transition:.25s ease;
+}
+
+input::placeholder{color:#9ca3af}
+textarea{resize:none;height:80px}
+
+input:focus,select:focus,textarea:focus{
+    outline:none;
+    border-color:#005cb3;
+    box-shadow:0 0 0 3px rgba(0,92,179,.15);
+}
+
+.row{display:flex;gap:14px}
+.row .form-group{flex:1}
+
+/* BUTTON */
+.submit-btn{
+    margin:26px 38px 0;
+    width:calc(100% - 76px);
+    padding:15px;
+    font-size:14px;
+    font-weight:600;
+    background:linear-gradient(135deg,#f4b400,#ffcc00);
+    color:#1f2937;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.25s ease;
+}
+.submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+.footer{
+    padding:24px 38px;
+    border-top:1px solid #e5e7eb;
+    font-size:11.5px;
+    color:#6b7280;
+    line-height:1.7;
+    background:#f9fafb;
+    border-radius:0 0 16px 16px;
+}
+.footer strong{color:#003d79}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:600px){
+    .row{flex-direction:column}
+    .submit-btn{margin:20px;width:calc(100% - 40px)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="header">
+    <h1>Form Pengisian Data Nasabah</h1>
+    <p>Bank Mandiri – Formulir Administrasi & Verifikasi Nasabah</p>
+</div>
+
+<form>
+
+<!-- A. DATA PRIBADI -->
+<div class="section">
+<div class="section-title">A. Data Pribadi</div>
+
+<div class="form-group">
+<label>Nama Lengkap (Sesuai KTP)</label>
+<input type="text">
+</div>
+
+<div class="row">
+<div class="form-group">
+<label>Tempat Lahir</label>
+<input type="text">
+</div>
+<div class="form-group">
+<label>Tanggal Lahir</label>
+<input type="date">
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<label>Jenis Kelamin</label>
+<select>
+<option>-- Pilih --</option>
+<option>Laki-laki</option>
+<option>Perempuan</option>
+</select>
+</div>
+<div class="form-group">
+<label>Agama</label>
+<select>
+<option>Islam</option>
+<option>Kristen</option>
+<option>Katolik</option>
+<option>Hindu</option>
+<option>Buddha</option>
+<option>Konghucu</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<label>Status Perkawinan</label>
+<select>
+<option>Belum Kawin</option>
+<option>Kawin</option>
+<option>Cerai</option>
+</select>
+</div>
+<div class="form-group">
+<label>Pendidikan Terakhir</label>
+<select>
+<option>SMA/SMK</option>
+<option>Diploma</option>
+<option>S1</option>
+<option>S2</option>
+<option>S3</option>
+</select>
+</div>
+</div>
+</div>
+
+<!-- B. DATA KEPENDUDUKAN -->
+<div class="section">
+<div class="section-title">B. Data Kependudukan</div>
+
+<div class="form-group">
+<label>NIK</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Nama Ibu Kandung</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Alamat Sesuai KTP</label>
+<textarea></textarea>
+</div>
+</div>
+
+<!-- C. DATA KONTAK -->
+<div class="section">
+<div class="section-title">C. Data Kontak</div>
+
+<div class="row">
+<div class="form-group">
+<label>No. Handphone</label>
+<input type="text">
+</div>
+<div class="form-group">
+<label>Email Aktif</label>
+<input type="email">
+</div>
+</div>
+</div>
+
+<!-- D. DATA PEKERJAAN -->
+<div class="section">
+<div class="section-title">D. Data Pekerjaan & Keuangan</div>
+
+<div class="row">
+<div class="form-group">
+<label>Pekerjaan</label>
+<input type="text">
+</div>
+<div class="form-group">
+<label>Nama Perusahaan</label>
+<input type="text">
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<label>Sumber Penghasilan</label>
+<select>
+<option>Gaji</option>
+<option>Usaha</option>
+<option>Investasi</option>
+<option>Lainnya</option>
+</select>
+</div>
+<div class="form-group">
+<label>Penghasilan per Bulan</label>
+<select>
+<option>< Rp5.000.000</option>
+<option>Rp5.000.000 - Rp10.000.000</option>
+<option>> Rp10.000.000</option>
+</select>
+</div>
+</div>
+</div>
+
+<!-- E. DATA PERBANKAN -->
+<div class="section">
+<div class="section-title">E. Data Perbankan</div>
+
+<div class="row">
+<div class="form-group">
+<label>Nomor Rekening</label>
+<input type="text">
+</div>
+<div class="form-group">
+<label>Jenis Rekening</label>
+<select>
+<option>Tabungan</option>
+<option>Giro</option>
+<option>Deposito</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<label>Nomor Kartu Debit</label>
+<input type="text" placeholder="XXXX XXXX XXXX XXXX">
+</div>
+<div class="form-group">
+<label>Masa Aktif Kartu</label>
+<input type="text" placeholder="MM/YY">
+</div>
+</div>
+
+<div class="form-group">
+<label>Cabang Pembukaan Rekening</label>
+<input type="text">
+</div>
+</div>
+
+<!-- F. KONTAK DARURAT -->
+<div class="section">
+<div class="section-title">F. Kontak Darurat</div>
+
+<div class="row">
+<div class="form-group">
+<label>Nama Lengkap</label>
+<input type="text">
+</div>
+<div class="form-group">
+<label>Hubungan</label>
+<input type="text">
+</div>
+</div>
+
+<div class="form-group">
+<label>No. Handphone Kontak Darurat</label>
+<input type="text">
+</div>
+</div>
+
+<!-- PERNYATAAN -->
+<div class="section">
+<div class="section-title">Pernyataan Nasabah</div>
+<div class="form-group">
+<label>
+<input type="checkbox"> Saya menyatakan seluruh data yang saya isi adalah benar dan dapat dipertanggungjawabkan.
+</label>
+</div>
+</div>
+
+<button class="submit-btn">Simpan & Kirim Data</button>
+
+</form>
+
+<div class="footer">
+<strong>PT Bank Mandiri (Persero) Tbk</strong><br>
+Berizin dan diawasi oleh OJK serta dijamin oleh LPS.<br>
+Seluruh data nasabah dijaga kerahasiaannya.
+</div>
+
+</div>
+
+</body>
+</html>
